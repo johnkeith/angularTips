@@ -9,7 +9,8 @@
     function($routerProvider){
       $routerProvider.
         when('/', {
-          templateUrl: '../html/templates/tipCalc.html'
+          templateUrl: '../html/templates/tipCalc.html',
+          controller: 'tipCalcCtrl'
         }).
         otherwise("/");
       }
