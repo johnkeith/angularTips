@@ -1,9 +1,18 @@
 (function(){
   angular.module("tipsAndTempsApp", [
+    'ngRoute',
     'controllers',
+    'tipCalc'
   ])
 
-  .config(function($stateProvider, $urlRouterProvider){
-    $urlRouterProvider.otherwise("/");
-  });
+  .config(["$routeProvider",
+    function($routerProvider){
+      $routerProvider.
+        when('/', {
+          templateUrl: '../html/templates/tipCalc.html'
+        }).
+        otherwise("/");
+      }
+    ]
+  );
 })();

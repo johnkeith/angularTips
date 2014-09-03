@@ -68,7 +68,7 @@ var build_state = 'prod',
         cwd: 'haml/',
         src: '**/*.haml',
         dest: 'html/',
-        ext: '.haml.html'
+        ext: '.html'
     }],
 
     watched_haml_files = ['haml/**/*.haml'];

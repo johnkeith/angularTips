@@ -5,6 +5,7 @@
     "bootstrap-sass-official": "latest",
     "fontawesome": "latest",
     "angular": "latest",
+    "angular-route": "latest"
   },
   "private": true,
   "devDependencies": {
