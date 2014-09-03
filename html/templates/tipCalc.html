@@ -8,6 +8,12 @@
   </div>
   <div class='tip-container'>
     <div class='header'>Tip</div>
+    <div class='slider'>
+      <input ng-change='calculate()' ng-model='tip' type='text'>
+    </div>
+  </div>
+  <div class='total-container'>
+    <div class='header'>Total</div>
     <div class='number'>
       {{ billWithTip }}
     </div>

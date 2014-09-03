@@ -2,7 +2,9 @@ angular.module("controllers", [])
   .controller("tipCalcCtrl", ["$scope", "tipCalc",
     function($scope, tipCalc){
       $scope.calculate = function(){
-        $scope.billWithTip = tipCalc.defaultCalc($scope.bill, 0.20);
+        tipConverted = tipCalc.percentConvertor($scope.tip);
+        $scope.billWithTip = tipCalc.defaultCalc($scope.bill, tipConverted);
       };
-      $scope.bill;
+      $scope.bill = 0;
+      $scope.tip = 0;
   }]);
