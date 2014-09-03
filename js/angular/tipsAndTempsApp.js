@@ -1,5 +1,5 @@
 (function(){
-  angular.module("tipsAndTempsApp", [
+  angular.module("angularTipsApp", [
     'ngRoute',
     'controllers',
     'tipCalc'

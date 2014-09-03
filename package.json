@@ -1,5 +1,5 @@
 {
-  "name": "tipsAndTemps",
+  "name": "angularTips",
   "version": "0.0.1",
   "description": "angular js app for calculating tips and temps",
   "main": "Gruntfile.js",
