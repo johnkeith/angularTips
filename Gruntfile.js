@@ -52,11 +52,15 @@ var build_state = 'prod',
         'js/bootstrap.min.js': [
             'bower_components/bootstrap-sass-official/assets/javascripts/**/*.js',
             'js/custom/javascript.js',
+        ],
+        'js/app.min.js': [
+            'js/angular/**/*.js',
         ]
     },
     watched_js_files = [
         'bower_components/bootstrap-sass-official/assets/javascripts/**/*.js',
         'js/custom/*.js',
+        'js/angular/**/*.js',
     ],
 
     haml_files = [{

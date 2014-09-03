@@ -1,10 +1,12 @@
 {
-  "name": "tipsAndTemps", 
-  "version": "0.0.0", 
+  "name": "tipsAndTemps",
+  "version": "0.0.0",
   "dependencies": {
     "bootstrap-sass-official": "latest",
     "fontawesome": "latest",
-    "angular": "latest"
+    "angular": "latest",
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+  }
 }
