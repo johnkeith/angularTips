@@ -1,4 +1,15 @@
-<p>Working on Tip calcs</p>
+<div class='title-bar'>TipAdvisor</div>
 <div ng-controller='tipCalcCtrl'>
-  <p>{{twenty_test}}</p>
+  <div class='bill-container'>
+    <div class='header'>Bill</div>
+    <div class='number'>
+      <input ng-change='calculate()' ng-model='bill' type='text'>
+    </div>
+  </div>
+  <div class='tip-container'>
+    <div class='header'>Tip</div>
+    <div class='number'>
+      {{ billWithTip }}
+    </div>
+  </div>
 </div>

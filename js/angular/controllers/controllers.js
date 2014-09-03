@@ -1,5 +1,8 @@
 angular.module("controllers", [])
   .controller("tipCalcCtrl", ["$scope", "tipCalc",
     function($scope, tipCalc){
-      $scope.twenty_test = tipCalc.defaultCalc(20, 0.20);
+      $scope.calculate = function(){
+        $scope.billWithTip = tipCalc.defaultCalc($scope.bill, 0.20);
+      };
+      $scope.bill;
   }]);
