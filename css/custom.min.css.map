@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAEI,sCAAS,CACP,MAAM,CAAE,eAAe,CACvB,aAAa,CAAE,GAAG,CAClB,OAAO,CAAE,YAAY,CACrB,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,IAAI,CACX,UAAU,CAAE,MAAM",
+"sources": ["../sass/custom.scss"],
 "names": [],
 "file": "custom.min.css"
 }
