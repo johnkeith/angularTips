@@ -2,47 +2,48 @@
 <div class='calc-container' ng-controller='tipCalcCtrl'>
   <div class='bill-container'>
     <div class='header'>Bill</div>
-    <div class='number'>
+    <div class='cur-bill'>
       {{ bill.dollars + "." + bill.cents | currency }}
       <!-- %input{ type: "number", "ng-model" => "bill", "ng-change" => "calcTotal()" } -->
     </div>
   </div>
   <div class='tip-container'>
     <div class='header'>Tip</div>
-    <div class='tip'>
+    <div class='cur-tip'>
       {{ tip + "%" }}
     </div>
     <div class='slider'>
       <!-- %input{ type: "text", "ng-model" => "tip", "ng-change" => "calculate()" } -->
-      <input max='100' min='0' ng-change='calcTotal()' ng-model='tip' type='range'>
     </div>
   </div>
   <div class='total-container'>
     <div class='header'>Total</div>
-    <div class='number'>
+    <div class='cur-total'>
       {{ billWithTip | currency }}
     </div>
   </div>
-  <div class='num-btns-container'>
-    <div class='row-btns'>
-      <button class='num-btn' ng-click="btnInput('1')" type='button'>1</button>
-      <button class='num-btn' ng-click="btnInput('2')" type='button'>2</button>
-      <button class='num-btn' ng-click="btnInput('3')" type='button'>3</button>
-    </div>
-    <div class='row-btns'>
-      <button class='num-btn' ng-click="btnInput('4')" type='button'>4</button>
-      <button class='num-btn' ng-click="btnInput('5')" type='button'>5</button>
-      <button class='num-btn' ng-click="btnInput('6')" type='button'>6</button>
-    </div>
-    <div class='row-btns'>
-      <button class='num-btn' ng-click="btnInput('7')" type='button'>7</button>
-      <button class='num-btn' ng-click="btnInput('8')" type='button'>8</button>
-      <button class='num-btn' ng-click="btnInput('9')" type='button'>9</button>
-    </div>
-    <div class='row-btns'>
-      <button class='num-btn' ng-click="btnInput('0')" type='button'>0</button>
-      <button class='num-btn' ng-click="btnInput('.')" type='button'>.</button>
-      <button class='num-btn' ng-click="btnInput('C')" type='button'>C</button>
+  <div class='calc-input-container'>
+    <div class='num-btns-container'>
+      <div class='row-btns'>
+        <button class='num-btn' ng-click="btnInput('1')" type='button'>1</button>
+        <button class='num-btn' ng-click="btnInput('2')" type='button'>2</button>
+        <button class='num-btn' ng-click="btnInput('3')" type='button'>3</button>
+      </div>
+      <div class='row-btns'>
+        <button class='num-btn' ng-click="btnInput('4')" type='button'>4</button>
+        <button class='num-btn' ng-click="btnInput('5')" type='button'>5</button>
+        <button class='num-btn' ng-click="btnInput('6')" type='button'>6</button>
+      </div>
+      <div class='row-btns'>
+        <button class='num-btn' ng-click="btnInput('7')" type='button'>7</button>
+        <button class='num-btn' ng-click="btnInput('8')" type='button'>8</button>
+        <button class='num-btn' ng-click="btnInput('9')" type='button'>9</button>
+      </div>
+      <div class='row-btns'>
+        <button class='num-btn' ng-click="btnInput('0')" type='button'>0</button>
+        <button class='num-btn' ng-click="btnInput('.')" type='button'>.</button>
+        <button class='num-btn' ng-click="btnInput('C')" type='button'>C</button>
+      </div>
     </div>
   </div>
 </div>

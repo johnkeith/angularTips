@@ -2,36 +2,37 @@
 .calc-container{ "ng-controller" => "tipCalcCtrl" }
   .bill-container
     .header Bill
-    .number
+    .cur-bill
       {{ bill.dollars + "." + bill.cents | currency }}
       / %input{ type: "number", "ng-model" => "bill", "ng-change" => "calcTotal()" }
   .tip-container
     .header Tip
-    .tip
+    .cur-tip
       {{ tip + "%" }}
     .slider
       / %input{ type: "text", "ng-model" => "tip", "ng-change" => "calculate()" }
-      %input{ type: "range", min: "0", max: "100", "ng-model" => "tip", "ng-change" => "calcTotal()" }
   .total-container
     .header Total
-    .number
+    .cur-total
       {{ billWithTip | currency }}
-  .num-btns-container
-    .row-btns
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('1')" } 1
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('2')" } 2
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('3')" } 3
-    .row-btns
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('4')" } 4
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('5')" } 5
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('6')" } 6
-    .row-btns
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('7')" } 7
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('8')" } 8
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('9')" } 9
-    .row-btns
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('0')" } 0
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('.')" } .
-      %button.num-btn{ type: "button", "ng-click" => "btnInput('C')" } C
+  .calc-input-container
+    .num-btns-container
+      .row-btns
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('1')" } 1
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('2')" } 2
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('3')" } 3
+      .row-btns
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('4')" } 4
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('5')" } 5
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('6')" } 6
+      .row-btns
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('7')" } 7
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('8')" } 8
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('9')" } 9
+      .row-btns
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('0')" } 0
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('.')" } .
+        %button.num-btn{ type: "button", "ng-click" => "btnInput('C')" } C
+
 
 
