@@ -16,11 +16,11 @@ body {
   -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 .phone-container {
-  border-top: 10px solid black;
-  border-right: 6px solid black;
-  border-bottom: 10px solid black;
-  border-left: 6px solid black;
-  border-radius: 6px;
+  border-top: 72px solid black;
+  border-right: 15px solid black;
+  border-bottom: 72px solid black;
+  border-left: 15px solid black;
+  border-radius: 15px;
   margin: 0 auto;
   width: $max-width;
 }
@@ -55,22 +55,31 @@ body {
 }
 
 .tip-container{
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   background: $niagara-green;
   font-size: 1.8em;
   padding: 10px;
   .header{
     display: inline-block;
-    width: 32%;
+    float: left;
+    width: 33.33%;
   }
   .cur-tip-per{
     display: inline-block;
+    float: left;
     text-align: center;
-    width: 32%;
+    width: 33.33%;
   }
   .cur-tip {
     display: inline-block;
+    float: right;
+    overflow: hidden;
     text-align: right;
-    width: 32%;
+    width: 33.33%;
   }
 }
 

@@ -8,10 +8,10 @@ angular.module("controllers", [])
         else if(btnVal == "."){
           $scope.centsPressed = true;
         }
-        else if ($scope.centsPressed == true && $scope.bill.cents.length < 2){
+        else if($scope.centsPressed == true && $scope.bill.cents.length < 2){
           $scope.bill.cents += btnVal;
         }
-        else if ($scope.centsPressed == false){
+        else if($scope.centsPressed == false && $scope.bill.dollars.length < 10){
           $scope.bill.dollars += btnVal;
         }
         $scope.calcTotals();
