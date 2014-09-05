@@ -15,7 +15,6 @@ $max-height: 100%;
 html {
   height: $max-height;
 }
-
 body {
   background: $niagara-green;
   color: white;
@@ -24,7 +23,6 @@ body {
 }
 .main-container {
   background: $niagara-green;
-  border: 2px solid white;
   border-radius: 0px;
   max-width: $max-width;
   margin:0 auto;
@@ -94,53 +92,32 @@ body {
   }
 }
 
-.calc-input-container {
-  .num-btns-container {
-    width:100%;
-    .row-btns {
-      padding-left:0px;
-      text-align: center;
-      &:last-child{
-        margin-bottom:5px;
-      }
-      .num-btn {
-        &:hover {
-          background: white;
-          color: $niagara-green;
-        }
-        background: rgba(255,255,255,0);
-        border: 2px solid white;
-        border-radius: 50%;
-        display: inline-block;
-        height: 70px;
-        margin:0 10px 2px 0;
-        outline: none;
-        text-align: center;
-        width:70px;
-      }
+.num-btns-container {
+  width:100%;
+  .row-btns {
+    padding-left:0px;
+    text-align: center;
+    &:last-child{
+      margin-bottom:5px;
     }
-  // .num-btns-container {
-  //   display: inline-block;
-  //   height: 100%;
-  //   width:75%;
-  //   .row-btns {
-  //     display: flex;
-  //     flex-direction: row;
-  //     min-height:100px;
-  //     .num-btn {
-  //       &:first-child{
-  //         border-left:none;
-  //       }
-  //       background: rgba(255,255,255,0);
-  //       border: 2px solid white;
-  //       display: inline-block;
-  //       flex: 1;
-  //       margin:0 2px 2px 0;
-  //       text-align: center;
-  //     }
-  //   }
+    .num-btn {
+      &:hover {
+        background: white;
+        color: $niagara-green;
+      }
+      background: rgba(255,255,255,0);
+      border: 2px solid white;
+      border-radius: 50%;
+      display: inline-block;
+      height: 70px;
+      margin:0 10px 2px 0;
+      outline: none;
+      text-align: center;
+      width:70px;
+    }
   }
 }
+
 .tip-slider-container {
   border-bottom: 2px solid white;
   padding: 0 10px 10px 10px;
@@ -161,8 +138,5 @@ body {
     display: inline-block;
     height: 6px;
     width: 100%;
-  }
-  .cur-percent {
-
   }
 }
