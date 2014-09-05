@@ -1,5 +1,2 @@
-/bower_components
 /node_modules
-/css/bootstrap.**
-/js/bootstrap.**
 .sass-cache
