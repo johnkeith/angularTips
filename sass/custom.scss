@@ -6,16 +6,28 @@ $jaffa-orange: rgba(235, 151, 78, 1);
 $sunset-orange: rgba(246, 71, 71, 1);
 
 $max-width: 320px;
-
+*:focus {
+  outline: none;
+}
 body {
-  background: $niagara-green;
+  background: $ebony-clay;
   color: white;
   font-family: 'Lato', sans-serif;
   -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
-.main-container {
-  border: 2px solid white;
+.phone-container {
+  border-top: 10px solid black;
+  border-right: 6px solid black;
+  border-bottom: 10px solid black;
+  border-left: 6px solid black;
   border-radius: 6px;
+  margin: 0 auto;
+  width: $max-width;
+}
+.main-container {
+  background: $niagara-green;
+  border: 2px solid white;
+  border-radius: 0px;
   max-width: $max-width;
   margin:0 auto;
 }
@@ -44,15 +56,21 @@ body {
 
 .tip-container{
   background: $niagara-green;
-  border-bottom: 2px solid white;
   font-size: 1.8em;
   padding: 10px;
   .header{
     display: inline-block;
+    width: 32%;
   }
-  .cur-tip{
+  .cur-tip-per{
     display: inline-block;
-    float: right;
+    text-align: center;
+    width: 32%;
+  }
+  .cur-tip {
+    display: inline-block;
+    text-align: right;
+    width: 32%;
   }
 }
 
@@ -73,22 +91,25 @@ body {
   .num-btns-container {
     width:100%;
     .row-btns {
-      padding-left:10px;
+      padding-left:0px;
+      text-align: center;
       &:last-child{
-        margin-bottom:10px;
+        margin-bottom:5px;
       }
       .num-btn {
-        &:first-child{
+        &:hover {
+          background: white;
+          color: $niagara-green;
         }
         background: rgba(255,255,255,0);
         border: 2px solid white;
         border-radius: 50%;
         display: inline-block;
-        height: 75px;
-        margin:0 0px 2px 0;
+        height: 70px;
+        margin:0 10px 2px 0;
         outline: none;
         text-align: center;
-        width:75px;
+        width:70px;
       }
     }
   // .num-btns-container {
@@ -112,15 +133,26 @@ body {
   //     }
   //   }
   }
-
-  .tip-slider-container {
-    display: inline-block;
-    width:24%;
-    .tip-slider {
-      -webkit-transform: translate3d(0px,0px,0px);
-      -webkit-transform: rotate(270deg);
-      transform: translate3d(0px,0px,0px);
-      transform: rotate(270deg);
+}
+.tip-slider-container {
+  border-bottom: 2px solid white;
+  padding: 0 10px 10px 10px;
+  .tip-slider {
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border-radius: 50%;
+      border:2px solid white;
+      background: $sunset-orange;
+      height: 20px;
+      outline:none;
+      width: 20px;
     }
+    -webkit-appearance: none;
+    display: inline-block;
+    height: 6px;
+    width: 100%;
+  }
+  .cur-percent {
+
   }
 }

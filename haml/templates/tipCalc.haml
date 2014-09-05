@@ -4,13 +4,15 @@
     .header Bill
     .cur-bill
       {{ bill.dollars + "." + bill.cents | currency }}
-      / %input{ type: "number", "ng-model" => "bill", "ng-change" => "calcTotal()" }
+      / %input{ type: "number", "ng-model" => "bill", "ng-change" => "calcTotals()" }
   .tip-container
     .header Tip
-    .cur-tip
+    .cur-tip-per
       {{ tip + "%" }}
-    .slider
-      / %input{ type: "text", "ng-model" => "tip", "ng-change" => "calculate()" }
+    .cur-tip
+      {{ tipInCur | currency }}
+  .tip-slider-container
+    %input.tip-slider{ type: "range", min: "0", max: "35", step: "1", value: "15", "ng-model" => "tip", "ng-change" => "calcTotals()" }
   .total-container
     .header Total
     .cur-total
@@ -33,6 +35,9 @@
         %button.num-btn{ type: "button", "ng-click" => "btnInput('0')" } 0
         %button.num-btn{ type: "button", "ng-click" => "btnInput('.')" } .
         %button.num-btn{ type: "button", "ng-click" => "btnInput('C')" } C
+
+      
+
 
 
 

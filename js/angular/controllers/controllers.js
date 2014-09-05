@@ -14,12 +14,13 @@ angular.module("controllers", [])
         else if ($scope.centsPressed == false){
           $scope.bill.dollars += btnVal;
         }
-        $scope.calcTotal();
+        $scope.calcTotals();
       };
-      $scope.calcTotal = function(){
+      $scope.calcTotals = function(){
         tipConverted = tipCalc.percentConvertor($scope.tip);
         billConverted = tipCalc.billConvertor($scope.bill);
         $scope.billWithTip = tipCalc.defaultCalc(billConverted, tipConverted);
+        $scope.tipInCur = $scope.billWithTip - billConverted;
       };
       $scope.clearBill = function(){
         $scope.bill.dollars = "0";
