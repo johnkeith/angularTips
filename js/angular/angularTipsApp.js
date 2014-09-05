@@ -2,7 +2,8 @@
   angular.module("angularTipsApp", [
     'ngRoute',
     'controllers',
-    'tipCalc'
+    'tipCalc',
+    'vr.directives.slider'
   ])
 
   .config(["$routeProvider",
