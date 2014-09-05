@@ -5,7 +5,10 @@
     "bootstrap-sass-official": "latest",
     "fontawesome": "latest",
     "angular": "latest",
-    "angular-route": "latest"
+    "angular-route": "latest",
+    "normalize.css": "latest",
+    "angular-touch": "latest",
+    "venturocket-angular-slider": "latest"
   },
   "private": true,
   "devDependencies": {

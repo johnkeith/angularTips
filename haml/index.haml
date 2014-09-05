@@ -2,18 +2,21 @@
 %html
   %head
     %meta{charset: "utf-8"}
-    %meta{content: "width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no", name: "viewport"}
+    %meta{content: "width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", name: "viewport"}
     %title Tips & Temps
-    %link{ href: "../css/bootstrap.min.css", rel: "stylesheet" }
+    / %link{ href: "../css/bootstrap.min.css", rel: "stylesheet" }
+    %link{ href: "../bower_components/normalize.css/normalize.css", rel: "stylesheet" }
     %link{ href: "../css/custom.min.css", rel: "stylesheet" }
     %script{ src: '../bower_components/jquery/dist/jquery.min.js' }
     %script{ src: '../bower_components/angular/angular.min.js' }
     %script{ src: '../bower_components/angular-route/angular-route.min.js' }
-
+    %script{ src: '../bower_components/angular-touch/angular-touch.min.js' }
+    %script{ src: '../bower_components/venturocket-angular-slider/build/angular-slider.min.js' }
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Kalam:400,700' rel='stylesheet' type='text/css'>
   %body{ "ng-app" => "angularTipsApp" }
-    %div{ "ng-view" => "" }
+    .phone-container
+      .main-container{ "ng-view" => "" }
     %script{ src: '../js/angular/angularTipsApp.js'  }
     %script{ src: '../js/angular/controllers/controllers.js' }
     %script{ src: '../js/angular/services/services.js' }

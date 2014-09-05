@@ -7,10 +7,14 @@ angular.module("tipCalc", [])
         if(percent < 0){
           return Math.abs(percent);
         }
-        else if(percent > 1){
+        else if(percent >= 1){
           return percent / 100;
         }
         return percent;
+      },
+      billConvertor: function(billObj) {
+        bill = billObj.dollars + "." + billObj.cents;
+        return parseFloat(bill);
       },
       defaultCalc: function(bill, percent){
         bill = parseFloat(bill);

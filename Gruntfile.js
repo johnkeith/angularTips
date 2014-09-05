@@ -46,7 +46,10 @@ var build_state = 'prod',
     },
     // watch all .scss files in our sass directory
     // for changes
-    watched_sass_files = [ 'bower_components/bootstrap-sass-official/assets/stylesheets/**/*.scss' ],
+    watched_sass_files = [
+        'bower_components/bootstrap-sass-official/assets/stylesheets/**/*.scss',
+        'sass/*.scss'
+    ],
     
     uglify_files = {
         'js/bootstrap.min.js': [
